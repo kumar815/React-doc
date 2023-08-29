@@ -1,0 +1,146 @@
+1. What is React?
+Answer: React is a JavaScript library used for building user interfaces. It allows developers to create reusable UI components and manage application state efficiently.
+
+2. Explain JSX and provide an example.
+Answer: JSX (JavaScript XML) is a syntax extension for JavaScript used in React to write HTML-like code within JavaScript. It allows you to define React elements more intuitively.
+
+Example:
+jsx
+Copy code
+const element = <h1>Hello, JSX!</h1>;
+
+3. How can you render a React component?
+Answer: You can render a React component using ReactDOM.render() function.
+
+Example:
+jsx
+Copy code
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = () => <h1>Hello, React!</h1>;
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+4. What are React components?
+Answer: React components are the building blocks of a React application. They are reusable and self-contained UI elements. Components can be class-based or function-based.
+
+Example:
+jsx
+Copy code
+// Class-based component
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+}
+
+// Function-based component
+const Greeting = (props) => <h1>Hello, {props.name}!</h1>;
+
+5. How do you pass data to a component using props?
+Answer: You can pass data to a component using props.
+
+Example:
+jsx
+Copy code
+const Greeting = (props) => <h1>Hello, {props.name}!</h1>;
+const App = () => <Greeting name="Alice" />;
+
+6. Explain the useState hook with an example.
+Answer: The useState hook is used to add state to functional components.
+
+Example:
+jsx
+Copy code
+import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+
+7. What's the purpose of the useEffect hook?
+Answer: The useEffect hook is used for handling side effects in functional components, such as data fetching or DOM manipulation.
+
+Example:
+jsx
+Copy code
+import React, { useState, useEffect } from 'react';
+
+const DataFetchingComponent = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []);
+
+  return <ul>{data.map(item => <li key={item.id}>{item.name}</li>)}</ul>;
+};
+
+8. What is React Router used for?
+Answer: React Router is used for adding routing and navigation to React applications.
+
+Example:
+jsx
+Copy code
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
+const Home = () => <h1>Welcome to the Home Page</h1>;
+const About = () => <h1>About Us</h1>;
+
+const App = () => (
+  <BrowserRouter>
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+    </nav>
+    
+    <Route path="/" exact component={Home} />
+    <Route path="/about" component={About} />
+  </BrowserRouter>
+);
+
+9. What's the purpose of keys in React lists?
+Answer: Keys are used to help React identify which items have changed, added, or removed in a list of components. This optimization improves performance when updating the UI.
+
+Example:
+jsx
+Copy code
+const TodoList = ({ todos }) => (
+  <ul>
+    {todos.map(todo => (
+      <li key={todo.id}>{todo.text}</li>
+    ))}
+  </ul>
+);
+
+10. How can you lift state up in React?
+Answer: Lifting state up involves moving the state from a child component to a parent component to share the state among multiple children.
+
+Example:
+jsx
+Copy code
+const TemperatureConverter = () => {
+  const [celsius, setCelsius] = useState(0);
+
+  const handleCelsiusChange = (value) => {
+    setCelsius(value);
+  };
+
+  return (
+    <div>
+      <CelsiusInput celsius={celsius} onChange={handleCelsiusChange} />
+      <FahrenheitInput celsius={celsius} />
+    </div>
+  );
+};
+These examples cover some common React interview questions. Remember to practice coding and build projects to gain practical experience with React.
