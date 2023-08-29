@@ -1,8 +1,10 @@
 1. What is React?
-Answer: React is a JavaScript library used for building user interfaces. It allows developers to create reusable UI components and manage application state efficiently.
+Answer: React is a JavaScript library used for building user interfaces.
+It allows developers to create reusable UI components and manage application state efficiently.
 
 2. Explain JSX and provide an example.
-Answer: JSX (JavaScript XML) is a syntax extension for JavaScript used in React to write HTML-like code within JavaScript. It allows you to define React elements more intuitively.
+Answer: JSX (JavaScript XML) is a syntax extension for JavaScript used in React to write HTML-like code within JavaScript. 
+It allows you to define React elements more intuitively.
 
 Example:
 jsx
@@ -23,7 +25,8 @@ const App = () => <h1>Hello, React!</h1>;
 ReactDOM.render(<App />, document.getElementById('root'));
 
 4. What are React components?
-Answer: React components are the building blocks of a React application. They are reusable and self-contained UI elements. Components can be class-based or function-based.
+Answer: React components are the building blocks of a React application.
+They are reusable and self-contained UI elements. Components can be class-based or function-based.
 
 Example:
 jsx
@@ -124,7 +127,8 @@ const TodoList = ({ todos }) => (
 );
 
 10. How can you lift state up in React?
-Answer: Lifting state up involves moving the state from a child component to a parent component to share the state among multiple children.
+Answer: Lifting state up involves moving the state from a child component to a parent component
+to share the state among multiple children.
 
 Example:
 jsx
@@ -143,4 +147,5 @@ const TemperatureConverter = () => {
     </div>
   );
 };
+
 These examples cover some common React interview questions. Remember to practice coding and build projects to gain practical experience with React.
