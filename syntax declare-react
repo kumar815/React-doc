@@ -149,3 +149,51 @@ const TemperatureConverter = () => {
 };
 
 These examples cover some common React interview questions. Remember to practice coding and build projects to gain practical experience with React.
+1. What is React?
+React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage the state of the application efficiently. React uses a virtual DOM to optimize rendering performance by minimizing direct manipulation of the actual DOM.
+
+2. What is JSX?
+JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript code. It's used in React to describe the structure of UI components.
+
+3. Explain the concept of Virtual DOM.
+The Virtual DOM is a lightweight representation of the actual DOM. React uses the Virtual DOM to optimize the process of updating the UI. When the state of a component changes, React creates a new Virtual DOM tree, compares it with the previous one, and then calculates the most efficient way to update the actual DOM.
+
+4. What are React components?
+React components are reusable, self-contained pieces of UI that can be composed together to build complex user interfaces. Components can be class-based or function-based, and they manage their own state and UI logic.
+
+5. What's the difference between class components and functional components?
+Class components are created using ES6 classes and have a richer feature set, including state management and lifecycle methods. Functional components, on the other hand, are simpler and often used with React Hooks to manage state and lifecycle behaviors.
+
+6. Explain React Props.
+Props (short for properties) are a way to pass data from parent to child components. They are read-only and help components receive data and configuration.
+
+7. What are React Hooks?
+React Hooks are functions that let you "hook into" React state and lifecycle features from functional components. They provide a way to use state and other React features without writing a class.
+
+8. What's the significance of the useEffect hook?
+The useEffect hook is used for managing side effects in functional components, such as data fetching, subscriptions, or DOM manipulations. It replaces the lifecycle methods in class components.
+
+9. What's the purpose of useState hook?
+The useState hook is used to add state to functional components. It allows you to declare state variables and update them within the component.
+
+10. Explain the concept of controlled vs. uncontrolled components.
+Controlled components are components whose values are controlled by React's state. They receive their current value through props and notify changes through callbacks. Uncontrolled components store their own state internally, usually via DOM manipulation.
+
+11. How does data flow in React?
+In React, data flows unidirectionally, from parent to child components through props. If child components need to communicate with their parent components, they can do so by passing callback functions as props.
+
+12. What's the purpose of keys in React lists?
+Keys are used to uniquely identify elements in a list. They help React efficiently update the DOM by associating each element with its previous state.
+
+13. What's Redux?
+Redux is a state management library often used with React applications. It provides a predictable state container and a centralized way to manage application state, making it easier to debug and maintain complex applications.
+
+14. What's React Router?
+React Router is a library that provides navigation and routing capabilities to React applications. It enables the creation of single-page applications with different routes and views.
+
+15. How can you optimize the performance of a React application?
+- Use the shouldComponentUpdate lifecycle method or PureComponent to prevent unnecessary renders.
+- Memoize expensive calculations using the React.memo higher-order component.
+- Implement code splitting to load only the necessary components on demand.
+- Use the React.lazy and Suspense components for dynamic imports.
+- Optimize the use of setState and consider using the useReducer hook for more complex state management
